@@ -8,8 +8,8 @@ import java.util.Map;
 import com.mess.Mess;
 
 public interface deserealization {
-	public static Map<Integer, Mess> restoreCustomerDetails(String fileName) throws ClassNotFoundException, IOException{
-		try(ObjectInputStream in =new ObjectInputStream(new FileInputStream(fileName))){
+	public static Map<Integer, Mess> restoreCustomerDetails(String messEntry) throws ClassNotFoundException, IOException{
+		try(ObjectInputStream in =new ObjectInputStream(new FileInputStream(messEntry))){
 			return (Map<Integer, Mess>)in.readObject();
 		}
 	}
