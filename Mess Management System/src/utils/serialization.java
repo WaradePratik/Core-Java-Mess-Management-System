@@ -8,8 +8,8 @@ import java.util.Map;
 import com.mess.Mess;
 
 public interface serialization {
-	public static void storeCustomerDetails(Map<Integer, Mess>map,String fileName) throws IOException{
-		try(ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream(fileName))){
+	public static void storeCustomerDetails(Map<Integer, Mess>map,String messEntry) throws IOException{
+		try(ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream(messEntry))){
 			out.writeObject(map);
 		}
 	}
